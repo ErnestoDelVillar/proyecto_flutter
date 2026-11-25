@@ -11,7 +11,7 @@ Future<void> main() async {
 
   var syncResult = 'SYNC OK';
   try {
-    await container.read(pokemonRepositoryProvider).refreshCatalog();
+    await container.read(pokemonRepositoryProvider).syncCatalogFromRemote();
   } on Failure catch (f) {
     syncResult = 'SYNC FALLO: $f';
   }

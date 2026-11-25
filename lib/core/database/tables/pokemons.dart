@@ -5,7 +5,8 @@ import 'package:drift/drift.dart';
 @TableIndex(name: 'idx_pokemons_name', columns: {#name})
 @TableIndex(name: 'idx_pokemons_dex', columns: {#nationalDexNumber})
 class Pokemons extends Table {
-  /// Id remoto de PokeAPI. No es autoincremental.
+
+  /// Id remoto de PokeAPI.
   IntColumn get id => integer()();
   TextColumn get name => text()();
   IntColumn get nationalDexNumber => integer()();
@@ -13,7 +14,7 @@ class Pokemons extends Table {
   /// Altura del pokemon en Decímetros (tal como lo entrega la API).
   IntColumn get height => integer()();
 
-  /// Peso Hectogramos (tal como lo entrega la API).
+  /// Peso (tal como lo entrega la API).
   IntColumn get weight => integer()();
 
   /// Sprite pequeño (front_default) para el listado. Ligero y rápido de cargar.

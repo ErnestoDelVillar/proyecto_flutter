@@ -37,7 +37,7 @@ class PokemonLocalDataSource {
   /// Guarda una página completa y su progreso en UNA transacción:
   /// o se guarda todo o no se guarda nada.
   /// Upsert por id remoto.
-  Future<void> upsertPage({
+  Future<void> upsertCatalogPage({
     required String resourceKey,
     required List<PokemonDto> page,
     required int nextOffset,

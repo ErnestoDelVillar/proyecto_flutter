@@ -30,6 +30,7 @@ query CatalogPage($limit: Int!, $offset: Int!) {
 ''';
 
 class PokemonRemoteDataSource {
+
   PokemonRemoteDataSource(
       this._client, {
         this.timeout = const Duration(seconds: 15),
